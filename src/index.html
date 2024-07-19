@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <link href="./output.css" rel="stylesheet" />
+    <script defer src="./main.js"></script>
+  </head>
+  <body
+    class="md:bg-[#37384E] bg-[#F0F0F0] flex flex-col items-center justify-center w-dvw h-dvh"
+  >
+    <!-- Breakpoint Visualizer -->
+    <section>
+      <div
+        class="bg-green-500 w-10 h-10 fixed top-0 left-0 flex items-center justify-center text-3xl rounded-br-lg"
+      >
+        📱
+      </div>
+      <div
+        class="sm:flex bg-yellow-500 w-10 h-10 hidden items-center justify-center text-white fixed top-0 left-0 rounded-br-lg"
+      >
+        sm
+      </div>
+      <div
+        class="md:flex bg-red-500 w-10 h-10 hidden items-center justify-center text-white fixed top-0 left-0 rounded-br-lg"
+      >
+        md
+      </div>
+      <div
+        class="lg:flex bg-blue-500 w-10 h-10 hidden items-center justify-center text-white fixed top-0 left-0 rounded-br-lg"
+      >
+        lg
+      </div>
+      <div
+        class="xl:flex bg-purple-500 w-10 h-10 hidden items-center justify-center text-white fixed top-0 left-0 rounded-br-lg"
+      >
+        xl
+      </div>
+      <div
+        class="2xl:flex bg-black w-10 h-10 hidden items-center justify-center text-white fixed top-0 left-0 rounded-br-lg"
+      >
+        2xl
+      </div>
+    </section>
+
+    <!-- Registration Card Container -->
+    <div
+      id="reg-card"
+      class="md:gap-2 md:flex-row-reverse bg-white md:max-w-[42rem] md:min-w-[40rem] flex flex-col items-center justify-between max-w-80 min-w-80 rounded-lg shadow-xl"
+    >
+      <!-- Image Container -->
+      <div class="flex">
+        <img
+          src="./assets/images/illustration-sign-up-mobile.svg"
+          alt=""
+          class="md:hidden"
+        />
+        <img
+          src="./assets/images/illustration-sign-up-desktop.svg"
+          alt=""
+          class="md:block hidden size-96"
+        />
+      </div>
+
+      <!-- Content Container -->
+      <div class="flex flex-col gap-4 p-6">
+        <h1 class="text-blue-950 font-bold text-4xl">Stay Updated!</h1>
+        <p class="text-black font-light text-sm">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ul
+          class="text-black font-semibold text-sm list-image-[] pl-2 flex flex-col gap-2"
+        >
+          <li class="bg-[url(./assets/images/icon-list.svg)] pl-8 bg-no-repeat">
+            Product discovery and building what matters
+          </li>
+          <li class="bg-[url(./assets/images/icon-list.svg)] pl-8 bg-no-repeat">
+            Measuring to ensure updates are a success
+          </li>
+          <li
+            class="bg-[url(./assets/images/icon-list.svg)] pl-8 bg-no-repeat pb-2"
+          >
+            And much more!
+          </li>
+        </ul>
+
+        <form id="form" class="flex flex-col gap-4" novalidate>
+          <div class="flex flex-col gap-2">
+            <div class="flex justify-between">
+              <label class="font-bold text-xs text-blue-950"
+                >Email Address</label
+              >
+              <label
+                id="email-error-text"
+                class="font-bold text-xs text-red-600"
+              >
+              </label>
+            </div>
+            <input
+              id="email-input"
+              type="email"
+              name="email"
+              placeholder="email@company.com"
+              class="py-4 px-2 rounded-lg border-2 h-14"
+            />
+            <span aria-live="polite" id="email-error"></span>
+          </div>
+          <button
+            class="font-semibold bg-[#232742] text-white px-2 py-4 rounded-lg h-14"
+          >
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Success Card Container -->
+    <div
+      id="success-card"
+      class="hidden md:max-w-96 md:h-[25rem] bg-white h-[40rem] flex flex-col items- justify-between max-w-80 min-w-80 rounded-2xl shadow-xl"
+    >
+      <!-- Image Container -->
+
+      <!-- Content Container -->
+      <img
+        src="./assets/images/icon-success.svg"
+        alt=""
+        class="size-16 pl-4 pt-4"
+      />
+      <div class="flex flex-col gap-4 p-6 h-full">
+        <h1 class="text-blue-950 font-bold text-4xl">
+          Thanks for subscribing!
+        </h1>
+        <p class="text-black font-light text-sm">
+          A confirmation email has been sent to
+          <b class="font-extrabold" id="correct-email-text">your@email.com.</b>
+          Please open it and click the button inside to confirm your
+          subscription.
+        </p>
+
+        <form action="" class="flex flex-col gap-4 mt-auto">
+          <button
+            class="font-semibold bg-[#232742] text-white px-2 py-4 rounded-lg h-14"
+          >
+            Dismiss message
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
